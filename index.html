@@ -140,9 +140,11 @@
   <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-<img src="./static/images/main_figure.png" >
+<img src="./static/images/intro.jpg" >
       <h2 class="subtitle has-text-centered">
-<p align="justify"> <b> <span style="color: blue;">Left</span></b>:  Existing methods improve CLIP's generalization by learning prompts with image supervision or using non-transferable prompt ensembling with LLM knowledge. In contrast, our approach, ProText, effectively learns prompts with LLM knowledge based text-only supervision which are transferable to new datasets and classes. <b><span style="color: blue;">Right</span></b>: Without using any images for supervision, ProText with text-only training improves over CLIP, CuPL, and prior 16-shot image-supervised methods in challenging cross-dataset transfer settings. Prompt ensembling based CuPL performs same as CLIP as it cannot transfer class specific LLM templates to cross-datasets.  </p>
+<p align="justify"> The image-to-background variations by our approach. Each column in the
+  figure represents a specific background generated through the corresponding prompt
+  mentioned below of each image.  </p>
       </h2>
     </div>
   </div>
@@ -155,7 +157,7 @@
       <div class="column">
         <div style="text-align:center;" >
 
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/HecFYi-WpFI?si=JcvS-YKp1kZpiil1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> --> -->
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/HecFYi-WpFI?si=JcvS-YKp1kZpiil1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> --> 
 
         </div>
       </div>
@@ -407,7 +409,8 @@ ProText with text-only training improves over CLIP, CuPL, and prior 16-shot imag
               </div>
                 <div class="content has-text-justified">
           <p>
-The above figure show attention map visualizations for CLIP and ProText for cross-datasets. ProText is trained on ImageNet-1k text-only data. This suggest that ProText can learn complementary contextual features, which steers CLIP for better transferability towards new datasets without relying on visual samples.         </p>
+            Qualitative comparison of our method (bottom row) with previous related work
+            (top row). Our method enables diversity and controlled background edits.      </p>
         </div>
 
         <h3 class="title is-4 has-text-justified">Conclusion</h3>
