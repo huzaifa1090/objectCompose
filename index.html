@@ -3,28 +3,28 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<meta property='og:title' content='ProText: Prompt Learning with Text Only Supervision'/>
+<meta property='og:title' content='ObjectCompose: Evaluating Resilience of Vision-Based Models on Object-to-Background Compositional Changes'/>
 <meta property='og:image' content=''/>
 <meta property='og:description' content=''/>
-<meta property='og:url' content='https://muzairkhattak.github.io/ProText/'/>
+<meta property='og:url' content='https://muhammad-huzaifaa.github.io/ObjectCompose/'/>
 <meta property='og:image:width' content='1200' />
 <meta property='og:image:height' content='663' />
 <!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
 <meta property="og:type" content='website'/>
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VZKE74FPW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-257CHSRQ00"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    gtag('config', 'G-9VZKE74FPW');
+  gtag('config', 'G-257CHSRQ00');
 </script>
   <meta charset="utf-8">
   <meta name="description"
-        content="Learning to Prompt with Text Only Supervision for Vision-Language Models">
-  <meta name="keywords" content="Prompt Learning, Vision-Language models, CLIP, Generalization">
+        content="Evaluating Resilience of Vision-Based Models on Object-to-Background Compositional Changess">
+  <meta name="keywords" content="Robustness, Adversarial, CLIP, Foundation Models">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Learning to Prompt with Text Only Supervision for Vision-Language Models</title>
 
@@ -67,26 +67,25 @@
           <h1 class="title is-2 publication-title">Learning to Prompt with Text Only Supervision for Vision-Language Models</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://muzairkhattak.github.io/">Muhammad Uzair Khattak</a><sup> 1</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=2Ft7r4AAAAAJ&hl=en">Hashmat Shadab Malik</a><sup> 1</sup>,</span>
             <span class="author-block">
-              <a href="https://ferjad.github.io/">Muhammad Ferjad Naeem</a><sup> 2</sup>,</span>
+              <a href="https://muhammad-huzaifaa.github.io/">Muhammad Huzaifa</a><sup> 1</sup>,</span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=tM9xKA8AAAAJ&hl=en&oi=ao">Muzammal Naseer</a><sup>1</sup>,
             </span>
               <br>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=TwMib_QAAAAJ&hl=en">Luc Van Gool</a><sup>2</sup>,
+              <a href="https://scholar.google.com.pk/citations?user=M59O9lkAAAAJ&hl=en">Salman Khan</a><sup>1,2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.de/citations?user=TFsE4BIAAAAJ&hl=en&oi=ao"> Federico Tombari</a><sup>3, 4</sup>
+              <a href="https://scholar.google.com/citations?user=zvaeYnUAAAAJ&hl=en">Fahad Shahbaz Khan </a><sup>1, 3</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Mohamed bin Zayed University of AI,</span>
-            <span class="author-block"><sup>2</sup>ETH Zurich,</span>
-            <span class="author-block"><sup>3</sup>TU Munich,</span>
-            <span class="author-block"><sup>4</sup>Google</span>
+            <span class="author-block"><sup>2</sup> Australian National University,</span>
+            <span class="author-block"><sup>3</sup>Linköping University</span>
           </div>
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -101,7 +100,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/muzairkhattak/ProText"
+                <a href="https://github.com/Muhammad-Huzaifaa/ObjectCompose"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -152,7 +151,25 @@
       <h2 class="title is-3">Abstract</h2>
       <div class="content has-text-justified">
         <p>
-Foundational vision-language models such as CLIP are becoming a new paradigm in vision, due to their excellent generalization abilities. However, adapting these models for downstream tasks while maintaining their generalization remains a challenge. In literature, one branch of methods adapts CLIP by learning prompts using visual information. While effective, most of these works require labeled data which is not practical, and often struggle to generalize towards new datasets due to over-fitting on the source data. An alternative approach resorts to training-free methods by generating class descriptions from large language models (LLMs) and perform prompt ensembling. However, these methods often generate class specific prompts that cannot be transferred to other classes, which incur higher costs by generating LLM descriptions for each class separately. In this work, we propose to combine the strengths of these both streams of methods by learning prompts using only text data derived from LLMs. As supervised training of prompts is not trivial due to absence of images, we develop a training approach that allows prompts to extract rich contextual knowledge from LLM data. Moreover, with LLM contextual data mapped within the learned prompts, it enables zero-shot transfer of prompts to new classes and datasets potentially cutting the LLM prompt engineering cost. To the best of our knowledge, this is the first work that learns generalized prompts using text only data. We perform extensive evaluations on 4 benchmarks where our method improves over prior ensembling works while being competitive to those utilizing labeled images. Our code and pretrained models are publicly available.          <br>
+          Given the large-scale multi-modal training of recent visionbased models and their generalization capabilities, understanding the extent of their robustness is critical for their real-world deployment. In this
+          work, our goal is to evaluate the resilience of current vision-based models against diverse object-to-background context variations. The majority
+          of robustness evaluation methods have introduced synthetic datasets to
+          induce changes to object characteristics (viewpoints, scale, color) or utilized image transformation techniques (adversarial changes, common corruptions) on real images to simulate shifts in distributions. Recent works
+          have explored leveraging large language models and diffusion models to
+          generate changes in the background. However, these methods either lack
+          in offering control over the changes to be made or distort the object
+          semantics, making them unsuitable for the task. Our method, on the
+          other hand, can induce diverse object-to-background changes while preserving the original semantics and appearance of the object. To achieve
+          this goal, we harness the generative capabilities of text-to-image, imageto-text, and image-to-segment models to automatically generate a broad
+          spectrum of object-to-background changes. We induce both natural and
+          adversarial background changes by either modifying the textual prompts
+          or optimizing the latents and textual embedding of text-to-image models. This allows us to quantify the role of background context in understanding the robustness and generalization of deep neural networks. We
+          produce various versions of standard vision datasets (ImageNet, COCO),
+          incorporating either diverse and realistic backgrounds into the images or
+          introducing color, texture, and adversarial changes in the background.
+          We conduct thorough experimentation and provide an in-depth analysis
+          of the robustness of vision-based models against object-to-background
+          context variations across different tasks. Our code and evaluation benchmark along with the datasets will be publicly released.          <br>
         </p>
       </div>
 
@@ -374,8 +391,15 @@ The above figure show attention map visualizations for CLIP and ProText for cros
         <h3 class="title is-4 has-text-justified">Conclusion</h3>
         <div class="content has-text-justified">
           <p>
-Prompt learning and LLM-based ensembling are effective techniques to improve CLIP's generalization. However, prompt learning often requires labeled images, which is less practical, while LLM-based ensembling methods are dominantly class-specific and not directly transferable to new classes. To address these challenges, we propose a new direction to adapt CLIP by learning generalized prompts with text-only supervision, without relying on visual data. We introduce a training strategy for prompts to learn a mapping function that embeds rich contextual knowledge from LLM text data within the prompts. The context learned by these prompts transfers well to unseen classes and datasets, potentially reducing the LLM prompt engineering and serving cost. We perform extensive evaluations on four benchmarks where our text-only approach performs favorably well over previous methods, including those utilizing labeled images.      </p>
-     <br><p>For additional details about ProText framework and results comparison in additional benchmarks, please refer to our main paper. Thank you!</p>
+            In this study, we propose ObjectCompose, a method for generating objectto-background compositional changes. Our method addresses the limitations of
+            current works, specifically distortion of object semantics and diversity in background changes. We accomplish this by utilizing the capabilities of image-to-text
+            and image-to-segmentation foundational models to preserve the object semantics, while we optimize for diverse object-to-background compositional changes
+            by modifying the textual prompts or optimizing the latents of the text-to-image
+            model. ObjectCompose offers a complimentary evaluation protocol to the existing ones, for comprehensive evaluations across current vision-based models
+            to reveal their vulnerability to background alterations. We anticipate that our
+            insights will pave the way for a more thorough evaluation of vision models, consequently driving the development of more effective methods for improving their
+            resilience.      </p>
+     <br><p>For additional details about ObjectCompose framework and results comparison in additional benchmarks, please refer to our main paper. Thank you!</p>
         </div>
 
 </section>
