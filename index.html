@@ -201,11 +201,14 @@
         <h2 class="title is-3">A Text Only Prompt Learning framework Vision-Language Models</h2>
         <div class="content has-text-justified">
           <p>
-          <h5> <b> Main contributions : </b></h5>
+          <h5> <b> Our Insights : </b></h5>
            <ol>
-             <li> <b>Text Only Prompt Learning Approach: </b> We develop a new approach for prompt learning in Vision-Language models without relying on visual samples for visual recognition tasks.</li>
-  <li><b>Learning Prompts with Contextual Mapping: </b> We introduce a training strategy for prompts to learn a mapping function that embeds rich and generalized contextual knowledge from Large Language Models (LLMs) based text data within the prompts.</li>
-  <li><b>LLM Prompts Transferability:  </b>With LLM contextual data mapped within the learned prompts, it enables zero-shot transfer of prompts to new classes and datasets, potentially reducing the LLM prompt engineering and serving costs.</li>
+             <li> <b>Text Only Prompt Learning Approach: </b> Vison-based models are vulnerable to diverse background changes, such as texture and color, with the most prone to adversarial background changes.</li>
+  <li><b>Learning Prompts with Contextual Mapping: </b> Increasing the capacity of the model for both CNN and transformer-based models helps in improving the robustness against varying background contexts. This indicates, that distilling from a more robust model can help in improving the robustness of small models.  Evidence of this is seen in the performance of DeiT-T, which, by distilling knowledge from a strong CNN-based model, shows improved robustness as compared to ViT-T</li>
+  <li><b>LLM Prompts Transferability:  </b>Our study indicates that adversarially trained models have limited robustness. While they perform well in scenarios with adversarial background changes, their effectiveness is limited for other types of object-to-background compositions. This highlights a significant gap in current model training approaches when it comes to dealing with diverse background changes.</li>
+  <li><b>LLM Prompts Transferability:  </b>Object detection and segmentation models, which incorporate object-to-background context, display reasonably better robustness to background changes than classification models, as evidenced by quantitative and qualitative results</li>
+  <li><b>LLM Prompts Transferability:  </b>Also, recent training approaches for vision transformer-based classification models that learn more interpretable attention maps show improvement in robustness to background changes </li>
+  <li><b>LLM Prompts Transferability:  </b>Furthermore, as shown in Table 2 (paper), models trained on large-scale datasets with more scalable and stable training show better robustness against background variations.</li>
 </ol>
           </p>
         </div>
@@ -224,7 +227,7 @@
     <!-- Latent space editing applications -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">ProText Framework</h2>
+        <h2 class="title is-3 has-text-centered">ObjectCompose Framework</h2>
 
 
         
@@ -413,7 +416,7 @@ The above figure show attention map visualizations for CLIP and ProText for cros
             to reveal their vulnerability to background alterations. We anticipate that our
             insights will pave the way for a more thorough evaluation of vision models, consequently driving the development of more effective methods for improving their
             resilience.      </p>
-     <br><p>For additional details about ObjectCompose framework and results comparison, please refer to our main paper. Thank you!</p>
+     <br><p>For additional details about ObjectCompose framework, dataset, results, please refer to our main paper. Thank you!</p>
         </div>
 
 </section>
