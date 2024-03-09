@@ -412,40 +412,144 @@
                  <h3 class="title is-4 has-text-justified">ProText addresses the transferability limitations of LLM based Prompt Ensembling methods.</h3>
 
                   <p align="justify"> With the contextual LLM information mapped with in the prompts, ProText enables the transferability of learned prompts to new classes and improves over CuPL.</p>
-<center>
-<table  border="0">
-<tbody>
-<tr>
-<td> <b>Method</b>   </td>
-<td><center> <b>Base Acc.</b>  </center>   </td>
-<td><center> <b>Novel Acc.</b>  </center>   </td>
-<td><center> <b>Harmonic mean (HM)</b>  </center>   </td>
-</tr>
-<tr>
-  <td><a href="https://arxiv.org/abs/2103.00020">CLIP</a></td>
-<td><center>69.34</center> </td>
-<td><center>74.22</center> </td>
-<td><center>71.70</center> </td>
-</tr>
-<tr>
-<td><a href="https://arxiv.org/abs/2209.03320">CuPL</a> </td>
-<td> <center>72.56 </center> </td>
-<td> <center>74.22</center> </td>
-<td> <center>73.38 </center> </td>
-</tr>
-<tr>
-   <td><b style="color:black;"> ProText (ours) </b></td>
-    <td> <b style="color:black;"> <center>72.95 </b></center>  </td>
-
-                    <td> <b style="color:black;"> <center>76.98 </b></center>  </td>
-
-                    <td> <b style="color:black;"> <center>74.91 </b></center>  </td>
-
-
-</tr>
-</tbody>
-</table>
-</center>
+                  <center>
+                    <table  border="0">
+                    <tbody>
+                    <tr>
+                    <td> <b>Dataset</b>   </td>
+                    <td><center> <b>ViT-T</b>  </center>   </td>
+                    <td><center> <b>ViT-S</b>  </center>   </td>
+                    <td><center> <b>Swin-T</b>  </center>   </td>
+                    <td><center> <b>Swin-S</b>  </center>   </td>
+                    <td><center> <b>Res-50</b>  </center>   </td>
+                    <td><center> <b>Res-152</b>  </center>   </td>
+                    <td><center> <b>Dense-161</b>  </center>   </td>
+                    <td><center> <b>Average</b>  </center>   </td>
+                    
+                    </tr>
+                    <tr>
+                      <td><a>Original</a></td>
+                    <td><center>95.5</center> </td>
+                    <td><center>97.5</center> </td>
+                    <td><center>97.9</center> </td>
+                    <td><center>98.3</center> </td>
+                    <td><center>98.5</center> </td>
+                    <td><center>99.1</center> </td>
+                    <td><center>97.2</center> </td>
+                    <td><center>97.1</center> </td>
+                    
+                    </tr>
+                    <tr>
+                    <td><a href="https://arxiv.org/abs/2303.17096">ImageNet-E(λ=20)</a></td>
+                    <td><center>91.3</center> </td>
+                    <td><center>94.5</center> </td>
+                    <td><center>96.5</center> </td>
+                    <td><center>97.7</center> </td>
+                    <td><center>96.0</center> </td>
+                    <td><center>97.6</center> </td>
+                    <td><center>95.4</center> </td>
+                    <td><center>95.5</center> </td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://arxiv.org/abs/2303.17096">ImageNet-E(λ=-20)</a></td>
+                      <td><center>90.4</center> </td>
+                      <td><center>94.5</center> </td>
+                      <td><center>95.9</center> </td>
+                      <td><center>97.4</center> </td>
+                      <td><center>95.4</center> </td>
+                      <td><center>97.4</center> </td>
+                      <td><center>95.0</center> </td>
+                      <td><center>95.1</center> </td>
+                    
+                    </tr>
+                    <tr>
+                      <td><a href="https://arxiv.org/abs/2303.17096">ImageNet-E(λ=20-adv)</a></td>
+                      <td><center>82.8</center> </td>
+                      <td><center>88.8</center> </td>
+                      <td><center>90.7</center> </td>
+                      <td><center>92.8</center> </td>
+                      <td><center>91.6</center> </td>
+                      <td><center>94.2</center> </td>
+                      <td><center>90.4</center> </td>
+                      <td><center>90.21</center> </td>
+                    
+                    </tr>
+                    <tr>
+                      <td><a href="https://arxiv.org/abs/2305.19164">LANCE</a></td>
+                      <td><center>80.0</center> </td>
+                      <td><center>83.8</center> </td>
+                      <td><center>87.6</center> </td>
+                      <td><center>87.7</center> </td>
+                      <td><center>86.1</center> </td>
+                      <td><center>87.4</center> </td>
+                      <td><center>85.1</center> </td>
+                      <td><center>85.3</center> </td>
+                    
+                    </tr>
+                    <tr>
+                      <td><a style="color:black;"></a>Classname(ours)</a></td>
+                      <td><center>90.5</center> </td>
+                      <td><center>94.0</center> </td>
+                      <td><center>95.1</center> </td>
+                      <td><center>95.4</center> </td>
+                      <td><center>96.7</center> </td>
+                      <td><center>96.5</center> </td>
+                      <td><center>94.7</center> </td>
+                      <td><center>94.7</center> </td>
+                    
+                    </tr>
+                    <tr>
+                      <td><a style="color:black;"></a>BLIP-2 Caption(ours)</a></td>
+                      <td><center>85.5</center> </td>
+                      <td><center>89.1</center> </td>
+                      <td><center>91.9</center> </td>
+                      <td><center>92.1</center> </td>
+                      <td><center>93.9</center> </td>
+                      <td><center>94.5</center> </td>
+                      <td><center>90.6</center> </td>
+                      <td><center>91.0</center> </td>
+                    
+                    </tr>
+                    <tr>
+                      <td><a style="color:black;"></a>Color(ours)</a></td>
+                      <td><center>67.1</center> </td>
+                      <td><center>83.8</center> </td>
+                      <td><center>85.8</center> </td>
+                      <td><center>86.1</center> </td>
+                      <td><center>88.2</center> </td>
+                      <td><center>91.7</center> </td>
+                      <td><center>80.9</center> </td>
+                      <td><b style="color:black;"> <center>83.37 </b></center>  </td>
+                    
+                    </tr>
+                    <tr>
+                      <td><a style="color:black;"></a>Texture(ours)</a></td>
+                      <td><center>64.7</center> </td>
+                      <td><center>80.4</center> </td>
+                      <td><center>84.1</center> </td>
+                      <td><center>85.8</center> </td>
+                      <td><center>85.5</center> </td>
+                      <td><center>90.1</center> </td>
+                      <td><center>80.3</center> </td>
+                      <td><b style="color:black;"> <center>81.55 </b></center>  </td>
+                    
+                    </tr><tr>
+                      <td><a style="color:black;"></a>Adversarial(ours)</a></td>
+                      <td><center>18.4</center> </td>
+                      <td><center>32.1</center> </td>
+                      <td><center>25.0</center> </td>
+                      <td><center>31.7</center> </td>
+                      <td><center>2.0</center> </td>
+                      <td><center>14.0</center> </td>
+                      <td><center>28.0</center> </td>
+                      <td><b style="color:black;"> <center>21.65 </b></center>  </td>
+                    
+                    </tr>
+                    
+                    
+                    </tbody>
+                    </table>
+                    </center>
 
 <br/>
         </div>
