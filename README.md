@@ -1,1 +1,1 @@
-# ProText official project page source code.
+# ObjectCompose official project page source code.
